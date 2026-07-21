@@ -291,6 +291,28 @@
     }));
   }
 
+  function setupPortfolioMenu() {
+    const menu = $("#portfolioMenu");
+    const toggle = $("#portfolioMenuToggle");
+    const close = $("#portfolioMenuClose");
+    const backdrop = $("#portfolioMenuBackdrop");
+    if (!menu || !toggle || !close || !backdrop) return;
+    const setOpen = (open) => {
+      menu.classList.toggle("open", open);
+      menu.setAttribute("aria-hidden", String(!open));
+      toggle.setAttribute("aria-expanded", String(open));
+      backdrop.hidden = !open;
+      (open ? close : toggle).focus();
+    };
+    toggle.addEventListener("click", () => setOpen(true));
+    close.addEventListener("click", () => setOpen(false));
+    backdrop.addEventListener("click", () => setOpen(false));
+    $$("a", menu).forEach((link) => link.addEventListener("click", () => setOpen(false)));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu.classList.contains("open")) setOpen(false);
+    });
+  }
+
   function setupScrollEffects() {
     const progress = $("#readingProgress");
     const updateReadingProgress = () => {
@@ -362,6 +384,7 @@
   function init() {
     setupPreferences();
     setupMenu();
+    setupPortfolioMenu();
     setupScrollEffects();
     updateLessonProgress();
     setupReset();

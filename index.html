@@ -14,6 +14,25 @@
 
   <div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div>
 
+  <button class="portfolio-menu-toggle" id="portfolioMenuToggle" type="button" aria-expanded="false" aria-controls="portfolioMenu"><span aria-hidden="true">☰</span><span>Portfolio menu</span></button>
+  <div class="portfolio-menu-backdrop" id="portfolioMenuBackdrop" hidden></div>
+  <aside class="portfolio-menu" id="portfolioMenu" aria-label="Digital curriculum portfolio menu" aria-hidden="true">
+    <div class="portfolio-menu-heading"><div><small>MICT 502</small><strong>Portfolio Contents</strong></div><button id="portfolioMenuClose" type="button" aria-label="Close portfolio menu">×</button></div>
+    <nav>
+      <a href="#home"><span aria-hidden="true">🏠</span>Home</a>
+      <a href="#about"><span aria-hidden="true">👤</span>About the Teacher</a>
+      <a href="#outcomes"><span aria-hidden="true">🎯</span>Learning Outcomes</a>
+      <a href="#blueprint"><span aria-hidden="true">📚</span>Curriculum Blueprint</a>
+      <a href="#technology"><span aria-hidden="true">🌐</span>Google Workspace Integration</a>
+      <a href="#ai-guide"><span aria-hidden="true">🤖</span>AI Integration <small>(with prompts guide)</small></a>
+      <a href="#multimedia"><span aria-hidden="true">🎥</span>Multimedia</a>
+      <a href="#assessment"><span aria-hidden="true">📝</span>Assessment</a>
+      <a href="#reflection"><span aria-hidden="true">📖</span>Reflection</a>
+      <a href="#presentation"><span aria-hidden="true">🎬</span>Recorded Presentation <small>(optional)</small></a>
+      <a href="#references"><span aria-hidden="true">📚</span>References</a>
+    </nav>
+  </aside>
+
   <header class="site-header" id="top">
     <a class="brand" href="#home" aria-label="ICT Pulse 7 home">
       <span class="brand-mark" aria-hidden="true">IP</span>
@@ -119,27 +138,27 @@
       </div>
       <div class="about-grid">
         <aside class="teacher-card reveal">
-          <div class="avatar" role="img" aria-label="Initials AS, profile placeholder for Althesa A. Sunio">AS</div>
+          <img class="teacher-photo" src="almera-sunio.jpg" alt="Almera A. Sunio, Junior High School Teacher I">
           <p class="eyebrow">Project designer</p>
-          <h3>Althesa A. Sunio</h3>
-          <p>Teacher II (Junior High School)<br>Estefania Montemayor National High School<br>Dumarao, Capiz</p>
-          <blockquote>“Technology becomes meaningful when it helps every learner ask better questions, make careful choices, and create something worth sharing.”</blockquote>
+          <h3>Almera A. Sunio</h3>
+          <p><strong>Junior High School Teacher I</strong><br>Teaching TLE–ICT, Grades 7–10<br>1 year and 7 months in service</p>
+          <blockquote>“I believe learners understand ICT best when they actively explore, question, create, and connect technology to responsible choices in real life. My role is to make learning inclusive, practical, and meaningful so every learner can grow from a user of technology into a thoughtful and ethical digital citizen.”</blockquote>
         </aside>
         <div class="project-story reveal">
           <article>
             <span class="story-label before">BEFORE</span>
-            <h3>The traditional lesson</h3>
-            <p>The topic was commonly presented through a lecture, a slide presentation, definitions copied from the board, and an essay completed after the discussion. Learners could name technologies, but they had few chances to examine evidence, connect benefits with risks, receive immediate feedback, or consider who is affected.</p>
+            <h3>Brief description of the traditional lesson</h3>
+            <p>The traditional lesson on ICT trends and issues relied mainly on teacher-led discussion, presentation slides, textbook definitions, note-taking, and a written quiz or essay. Learners identified terms such as artificial intelligence, cloud computing, privacy, and cybersecurity, but had limited opportunities to investigate current examples, compare benefits and risks, or receive immediate feedback.</p>
           </article>
           <article>
-            <span class="story-label gap">LEARNING GAP</span>
-            <h3>What learners need</h3>
-            <p>Grade 7 learners encounter AI tools, connected devices, cloud services, online scams, misinformation, unequal access, and electronic waste in everyday life. They need a clear way to distinguish a developing trend from an emerging issue and to discuss both with evidence—not simply repeat a definition.</p>
+            <span class="story-label selected">WHY THIS LESSON</span>
+            <h3>Reason for selecting the lesson</h3>
+            <p>This lesson was selected because ICT trends and issues are part of learners’ daily experiences and a key Grade 7 MATATAG competency. The topic changes rapidly, making it ideal for a digital redesign that connects curriculum content with timely, authentic situations and helps learners practice responsible decision-making.</p>
           </article>
           <article>
-            <span class="story-label now">NOW</span>
-            <h3>The digital redesign</h3>
-            <p>ICT Pulse 7 combines short explanations, authentic scenarios, micro-assessments, instant feedback, collaborative evidence work, learner choice, and a public-facing performance task. The website is responsive, printable, keyboard-accessible, and usable as a low-bandwidth resource.</p>
+            <span class="story-label gap">LEARNER NEED</span>
+            <h3>Problem, learning gap, or learner need addressed</h3>
+            <p>Learners may memorize definitions yet struggle to distinguish a trend from an issue, verify online claims, explain who is affected, and recommend a safe and ethical response. The innovation addresses this gap through short explanations, authentic Philippine school and community cases, guided source checking, immediate formative feedback, learner choice, and accessible online or printable activities.</p>
           </article>
         </div>
       </div>
@@ -662,7 +681,7 @@
 
   <footer class="site-footer">
     <div><span class="brand-mark" aria-hidden="true">IP</span><p><strong>ICT Pulse 7</strong><br>Digital Curriculum Innovation Portfolio · MICT 502 · Mid Year 2026</p></div>
-    <div><p>Designed by <strong>Althesa A. Sunio</strong><br>Estefania Montemayor National High School</p></div>
+    <div><p>Designed by <strong>Almera A. Sunio</strong><br>Junior High School Teacher I · TLE–ICT, Grades 7–10</p></div>
     <a href="#top">Back to top ↑</a>
   </footer>
 
