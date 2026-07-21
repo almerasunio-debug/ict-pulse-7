@@ -313,6 +313,23 @@
     });
   }
 
+  function setupSectionNavigation() {
+    const links = $$('#siteNav a[href^="#"], #portfolioMenu a[href^="#"]');
+    links.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const selector = link.getAttribute("href");
+        const target = selector ? $(selector) : null;
+        if (!target) return;
+        event.preventDefault();
+        requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          if (history.replaceState) history.replaceState(null, "", selector);
+          else window.location.hash = selector;
+        });
+      });
+    });
+  }
+
   function setupScrollEffects() {
     const progress = $("#readingProgress");
     const updateReadingProgress = () => {
@@ -385,6 +402,7 @@
     setupPreferences();
     setupMenu();
     setupPortfolioMenu();
+    setupSectionNavigation();
     setupScrollEffects();
     updateLessonProgress();
     setupReset();
